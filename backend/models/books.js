@@ -25,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   // This section contains the relationships for this model. See: https://docs.forestadmin.com/documentation/v/v6/reference-guide/relationships#adding-relationships.
-  Books.associate = (models) => {};
+  Books.associate = (models) => {
+    Books.belongsTo(models.authors);
+  };
 
   return Books;
 };
