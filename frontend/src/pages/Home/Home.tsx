@@ -1,13 +1,15 @@
 import React from 'react';
+import ReadingTimeline from '../../components/ReadingTimeline';
 
-const Home = () => (
-  <div className="h-screen w-screen flex justify-center">
-    <h1 className="w-full h-16 text-4xl text-blue-400 font-sans p-4">
+const Home: React.FunctionComponent = () => (
+  <div className="h-screen w-screen flex flex-col justify-start items-center pt-4 px-4">
+    <h1 className="w-full text-4xl text-blue-400 font-sans mb-4">
       <span aria-label="book" className="mr-2">
         📘
       </span>
       Le voyageur immobile
     </h1>
+    <ReadingTimeline />
   </div>
 );
 
